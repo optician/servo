@@ -2359,7 +2359,7 @@ impl<'a> ContentSizesComputation<'a> {
                 );
 
                 // TODO: need to handle TextWrapMode::Nowrap.
-                if self.previous_item_was_atomic_inline && soft_wrap_opportunity_prevented {
+                if !soft_wrap_opportunity_prevented {
                     self.line_break_opportunity();
                 }
 
